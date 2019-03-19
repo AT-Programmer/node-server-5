@@ -2,6 +2,7 @@ var express = require('express')
 var hbs = require('hbs')
 var app = express()
 var os = require('os')
+var port = process.env.PORT || 3000
 
 
 
@@ -41,6 +42,6 @@ app.get('/', (req,res) => {
  	})
  })
 
-app.listen(3000, () => {
-	console.log('We Are listening At Port 3000')
+app.listen(port, () => {
+	console.log(`Server Is Listening AT Port${port}`)
 });
